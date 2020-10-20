@@ -1,0 +1,4 @@
+venv
+docker-compose-test.yml
+*.xml
+.idea
