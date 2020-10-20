@@ -1,2 +1,15 @@
 #!/bin/bash
-docker-compose -f docker-compose.yml down
+
+RED=`tput setaf 1`
+GREEN=`tput setaf 2`
+NC=`tput sgr0`
+CUR_DIR=$(pwd)
+
+COMPOSE_FILE=./docker-compose.yml
+
+if [ ! -f "$COMPOSE_FILE" ]; then
+	echo "${RED}Error:${NC} docker-compose.yml not found"
+	exit 1
+fi
+
+docker-compose -f $COMPOSE_FILE down
