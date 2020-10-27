@@ -45,5 +45,13 @@ sudo docker-logs
 2. Роут, запрос по которому должен проксироваться
 3. Порт, на который должен проксироваться запрос
 ```bash
-sudo docker-prx biohac /api/ 7071
+sudo docker-prx betting-hub /api/ 7071
+```
+###docker-prx-clear
+Удаляет проксирование роутов https на localhost
+
+Аргументы:
+1. Название проекта
+```bash
+sudo docker-prx-clear betting-hub
 ```
